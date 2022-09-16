@@ -25,9 +25,6 @@ namespace Persistence
             base.OnModelCreating(builder);
         }
 
-        public Task<int> SaveAsync(CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

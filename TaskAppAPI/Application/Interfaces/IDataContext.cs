@@ -8,6 +8,6 @@ namespace Application.Interfaces
     public interface IDataContext
     {
         DbSet<Contact> Contacts { get; set; }
-        Task<int> SaveAsync(CancellationToken cancellationToken);
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }
