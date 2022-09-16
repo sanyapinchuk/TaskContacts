@@ -12,7 +12,7 @@ namespace Persistence.EntityTypeConfiguration
             builder.HasIndex(x=>x.Id).IsUnique();
             builder.Property(x => x.Name).HasMaxLength(150);
             builder.Property(x => x.MobilePhone).HasMaxLength(18);
-            builder.Property(x => x.JobTtile).HasMaxLength(150);
+            builder.Property(x => x.JobTitle).HasMaxLength(150);
             ////
         }
 
