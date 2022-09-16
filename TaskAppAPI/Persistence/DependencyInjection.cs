@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Application.Interfaces;
+using Persistence.Interfaces;
 
 namespace Persistence
 {
@@ -21,8 +22,12 @@ namespace Persistence
                 //options.UseSqlite(connectionString);
                 options.UseSqlServer(connectionString);
             });
+           
             services.AddScoped<IDataContext>(provider =>
                 provider.GetService<DataContext>());
+
+            services.AddScoped<IContactRepository, ContactRepository>();
+
             return services;
         }
     }

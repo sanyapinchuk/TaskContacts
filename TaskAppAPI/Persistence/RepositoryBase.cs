@@ -21,9 +21,9 @@ namespace Persistence
             await _dataContext.Set<T>().AddAsync(entity);
         }
 
-        public void DeleteAsync(T entity)
+        public void Delete(T entity)
         {
-             _dataContext.Set<T>().Remove(entity);
+            _dataContext.Set<T>().Remove(entity);
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -31,12 +31,15 @@ namespace Persistence
             return await _dataContext.Set<T>().ToListAsync();
         }
 
-
-        public void UpdateAsync(T entity)
+        public void Update(T entity)
         {
             _dataContext.Entry(entity).State = EntityState.Modified;
             _dataContext.Set<T>().Update(entity);
 
+        }
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _dataContext.SaveChangesAsync();
         }
     }
 }

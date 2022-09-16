@@ -16,7 +16,7 @@ namespace Persistence
 
         }
 
-        public async Task<Contact?> GetContactByIdAsync(int contactId)
+        public async Task<Contact?> GetContactByIdAsync(Guid contactId)
         {
             return await _dataContext.Contacts.Where(c=>c.Id == contactId)
                                               .AsNoTracking()

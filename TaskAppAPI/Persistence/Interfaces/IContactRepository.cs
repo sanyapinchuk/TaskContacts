@@ -9,6 +9,6 @@ namespace Persistence.Interfaces
 {
     public interface IContactRepository:IRepositoryBase<Contact>
     {
-        public Task<Contact?> GetContactByIdAsync(int contactId);
+        public Task<Contact?> GetContactByIdAsync(Guid contactId);
     }
 }
