@@ -14,7 +14,6 @@ namespace Application.Logger
         public FileLogger(string path)
         {
             _filePath = path;
-            
         }
         public IDisposable BeginScope<TState>(TState state)
         {
