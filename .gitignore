@@ -15,6 +15,7 @@
 
 #user-files
 task.txt
+log.txt
 
 # Mono auto generated files
 mono_crash.*
