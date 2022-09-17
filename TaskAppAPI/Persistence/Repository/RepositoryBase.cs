@@ -34,7 +34,10 @@ namespace Persistence
         public void Update(T entity)
         {
             _dataContext.Entry(entity).State = EntityState.Modified;
+            
             _dataContext.Set<T>().Update(entity);
+
+            //_dataContext.Entry(entity).State = EntityState.Modified;
 
         }
         public async Task<int> SaveChangesAsync()

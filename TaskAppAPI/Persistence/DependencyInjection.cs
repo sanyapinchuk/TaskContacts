@@ -21,6 +21,7 @@ namespace Persistence
             {
                 //options.UseSqlite(connectionString);
                 options.UseSqlServer(connectionString);
+                //options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
            
             services.AddScoped<IDataContext>(provider =>
