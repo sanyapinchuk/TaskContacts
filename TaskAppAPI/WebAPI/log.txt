@@ -4,15 +4,9 @@ Application started. Press Ctrl+C to shut down.
 Hosting environment: Development
 Content root path: C:\Users\Asus\Desktop\TZProject\TaskAppAPI\WebAPI\
 Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
-<<<<<<< HEAD
 Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT 1
-Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-=======
-Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT 1
-Executed DbCommand (39ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
->>>>>>> deb81473ee2f5dc0504be59bc81877acc81edc39
+Executed DbCommand (38ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 
 IF EXISTS
     (SELECT *
@@ -28,18 +22,13 @@ IF EXISTS
     )
 )
 SELECT 1 ELSE SELECT 0
-<<<<<<< HEAD
-Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
-FROM [Contacts] AS [c]
-=======
-Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
 FROM [Contacts] AS [c]
 Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
 Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 SELECT 1
-Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
 
 IF EXISTS
     (SELECT *
@@ -55,18 +44,292 @@ IF EXISTS
     )
 )
 SELECT 1 ELSE SELECT 0
-Executed DbCommand (36ms) [Parameters=[@__contactId_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
-SELECT TOP(1) [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
 FROM [Contacts] AS [c]
-WHERE [c].[Id] = @__contactId_0
-Now listening on: https://localhost:7241
-Now listening on: http://localhost:5241
-Application started. Press Ctrl+C to shut down.
-Hosting environment: Development
-Content root path: C:\Users\Asus\Desktop\TZProject\TaskAppAPI\WebAPI\
-Now listening on: https://localhost:7241
-Now listening on: http://localhost:5241
-Application started. Press Ctrl+C to shut down.
-Hosting environment: Development
-Content root path: C:\Users\Asus\Desktop\TZProject\TaskAppAPI\WebAPI\
->>>>>>> deb81473ee2f5dc0504be59bc81877acc81edc39
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (21ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]
+Entity Framework Core 6.0.9 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.9' with options: None
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[BirthDate], [c].[JobTitle], [c].[MobilePhone], [c].[Name]
+FROM [Contacts] AS [c]

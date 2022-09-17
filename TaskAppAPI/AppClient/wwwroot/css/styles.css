@@ -1,0 +1,151 @@
+
+body{
+	font-weight: bold;
+	color: #212120;
+	margin: 0px;	
+	font-family: 'Exo 2', sans-serif;
+   background-color: #DEDEDE;
+}
+a{
+	text-decoration: none;
+	color: #464644;
+}
+a:active{
+   color:#464644;
+}
+
+
+.header_contacts {
+  background: #282828;
+  height: 80px;
+}
+.header_contacts img {
+  margin-left: 20px;
+}
+#logotype {
+  height: 80px;
+  text-align: center;
+  position: absolute;
+  display: inline-block;
+}
+
+#end_logotype {
+  width: 57px;
+  margin-bottom: 0;
+}
+
+#arrow_up {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #5F5F5F;
+  margin-right: 0;
+  text-align: center;
+  position: sticky;
+  bottom: 60px;
+  left: 96%;
+  left: calc(99% - 40px);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  opacity: 0;
+  user-select: none;
+  cursor: pointer;
+}
+
+  #arrow_up > i {
+      color: #fff;
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 40px;
+      position: relative;
+      user-select: none;
+  }
+
+@media (min-width: 820px) {
+  #arrow_up:hover i {
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-delay: 0.01s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: both;
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+      top: 90%;
+  }
+
+  to {
+      top: -100%;
+  }
+}
+
+@-moz-keyframes bounce {
+  from {
+      top: 90%;
+  }
+
+  to {
+      top: -100%;
+  }
+}
+
+@-o-keyframes bounce {
+  from {
+      top: 90%;
+  }
+
+  to {
+      top: -100%;
+  }
+}
+
+@keyframes bounce {
+  from {
+      top: 90%;
+  }
+
+  to {
+      top: -100%;
+  }
+}
+
+.last_box {
+  height: 60px;
+  width: 100%;
+  color: #E3E3E3;
+  background-color: #282828;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.last_line {
+  text-align: center;
+  position: relative;
+  margin-left: 10%;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 13px;
+  flex-shrink: 1;
+}
+
+.contact_line {
+  float: right;
+  margin-right: 15px;
+  position: relative;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.contact_line i {
+    color: #D0D0D0;
+    margin-right: 3px;
+}
