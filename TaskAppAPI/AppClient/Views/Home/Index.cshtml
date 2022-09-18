@@ -14,21 +14,13 @@
                 <i class="contact_edit fas fa-user-edit"></i>
                 <i class="contact_delete fas fa-trash"></i>
             </div>
-            <span class="contact_id">
-                @Html.DisplayFor(modelItem => item.Id)
-            </span>
-            <div class="contact_name">
-                @Html.DisplayFor(modelItem => item.Name)
-            </div>
+            <span class="contact_id">@Html.DisplayFor(modelItem => item.Id)</span>
+            <div class="contact_name">@Html.DisplayFor(modelItem => item.Name)</div>
             
             <a class="contact_phone" href="tel:0000">@Html.DisplayFor(modelItem => item.MobilePhone)</a>
             <ul class="add_info_block">
-                <li class="contact_joo">
-                    @Html.DisplayFor(modelItem => item.JobTitle)
-                </li>
-                <li class="contact_birth">
-                    @Html.DisplayFor(modelItem => item.BirthDate)
-                </li>
+                <li class="contact_job">@Html.DisplayFor(modelItem => item.JobTitle)</li>
+                <li class="contact_birth">@Html.DisplayFor(modelItem => item.BirthDate)</li>
             </ul>
             <div class="more_info">
                 <div class="box_more">

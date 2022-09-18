@@ -14,7 +14,7 @@ namespace AppClient.Controllers
         {
             _logger = logger;
         }
-
+            
        
         
         public async Task<IActionResult> Index()
@@ -23,7 +23,7 @@ namespace AppClient.Controllers
             if(response.IsSuccessStatusCode)
             {
                 var contacts = response.Content.ReadFromJsonAsync<IEnumerable<Contact>>().Result;
-                ViewData["apiEditUrl"] = "Contact/edit";
+                ViewData["apiEditUrl"] = GlobalVariables.WebApiClient.BaseAddress+ "Contact/edit";
                 return View(contacts);
             }
             else
