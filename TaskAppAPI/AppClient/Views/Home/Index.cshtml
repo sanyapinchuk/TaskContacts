@@ -7,54 +7,50 @@
 <h1>Ваши контакты</h1>
 
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MobilePhone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.JobTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BirthDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
+<div id="contacts_list">    
+    @foreach (var item in Model) {
+        <div class="contact_block">
+            <div class="contact_icons_control">
+                <i class="contact_edit fas fa-user-edit"></i>
+                <i class="contact_delete fas fa-trash"></i>
+            </div>
+            <span class="contact_id">
                 @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
+            </span>
+            <div class="contact_name">
                 @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MobilePhone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.JobTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BirthDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+            </div>
+            
+            <a class="contact_phone" href="tel:0000">@Html.DisplayFor(modelItem => item.MobilePhone)</a>
+            <ul class="add_info_block">
+                <li class="contact_joo">
+                    @Html.DisplayFor(modelItem => item.JobTitle)
+                </li>
+                <li class="contact_birth">
+                    @Html.DisplayFor(modelItem => item.BirthDate)
+                </li>
+            </ul>
+            <div class="more_info">
+                <div class="box_more">
+                    <div class="more">
+                        Развернуть
+                        <img src="images/icons/vnis_new.svg" alt="">
+                    </div>
+                    <div class="less">
+                        Свернуть
+                        <img src="images/icons/vverh_new.svg" alt="">
+                    </div>
+                </div>						
+            </div>
+        </div>
+    }
+</div>
+<div class="button edit">
+    Редактировать
+</div>
+<div class="button delete">
+    Удалить
+</div> 
 <p>
     <a asp-action="Create">Добавить еще</a>
 </p>

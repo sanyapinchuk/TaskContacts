@@ -1,4 +1,10 @@
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body{
 	font-weight: bold;
 	color: #212120;
@@ -119,7 +125,7 @@ a:active{
   width: 100%;
   color: #E3E3E3;
   background-color: #282828;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
   flex-wrap: nowrap;
@@ -148,4 +154,218 @@ a:active{
 .contact_line i {
     color: #D0D0D0;
     margin-right: 3px;
+}
+
+.button{
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 20px 40px 20px 40px;
+  height: fit-content;
+  
+  background-color: #CCBD85;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.button:hover{
+   background-color: #A4976A; 
+}
+.button:active{
+  background-color: #A89B6D;
+  border:none;
+}
+
+#contacts_list{
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Montserrat', sans-serif;
+  flex-wrap: wrap;
+}
+.contact_block{
+  width: 400px;
+  background-color: #EAEAEA;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 5px;
+  height: fit-content;
+  margin: 30px;
+  transition: all 0.5s;
+}
+.contact_id{
+  display: none;
+}
+.contact_icons_control{
+  position: static;
+  right: 0;
+  float: right;
+  margin: 5px 5px 0 0;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.contact_block:hover>.contact_icons_control {
+  opacity:1;
+}
+.contact_block:hover{
+  box-shadow: 0 0 25px 1px #888;
+}
+.contact_icons_control> i{
+  display: inline-block;
+  cursor: pointer;
+}
+.contact_name{
+  font-size: 39px;
+  margin-top:15px;
+  margin-bottom: 15px;
+  padding-left: 40px;
+}
+.contact_phone{
+  font-size: 27px;
+  color:#000;
+}
+.contact_joo, .contact_birth{
+  font-size: 22px;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 30px;
+  
+}
+
+.add_info_block{
+  display: none;
+  list-style-type: circle;
+}
+.more_info{
+  text-align: right;
+  height: 25px;
+  position: relative;
+  margin-top: 15px;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e3e3e3+0,c0c0c0+100 */
+background: rgb(227,227,227); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(227,227,227,1) 0%, rgba(192,192,192,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(227,227,227,1) 0%,rgba(192,192,192,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(227,227,227,1) 0%,rgba(192,192,192,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#c0c0c0',GradientType=0 ); /* IE6-9 */
+}
+.more_info img{
+  width:14px;
+  margin-right: 2px;
+}
+.box_more{
+  position: relative;
+  left: calc( -118px + 100% );
+  height: 20px;
+  width:120px;
+  top:4px;  
+  box-shadow: -8px -5px 25px 15px #C2C2C2;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#c6c6c6+0,c0c0c0+100 */
+background: rgb(198,198,198); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(198,198,198,1) 0%, rgba(192,192,192,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(198,198,198,1) 0%,rgba(192,192,192,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(198,198,198,1) 0%,rgba(192,192,192,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c6c6', endColorstr='#c0c0c0',GradientType=0 ); /* IE6-9 */
+
+}
+.less{
+  visibility: hidden;
+}
+.more,.less{
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 16px;
+  background-color : rgb(170,169,160, 0);
+  user-select: none;
+}
+
+#pop-order{
+  display: fixed;
+  top:0;
+  width:100%;
+  bottom: 400px ;
+  visibility: hidden;
+}
+.order-all{
+  visibility: inherit;   /**/
+  width:100%;
+  position: fixed;
+  top:0;
+  height: 100%;
+}
+#add_place{
+  visibility: inherit;
+  width:100%;
+  height: 0;
+  overflow: hidden;
+}
+#order-form{
+  position:fixed;   
+  top:25%;
+  background-color: #ddd;
+  visibility: inherit;
+}
+.order{
+  display: block;
+  width:80%;
+  max-width:400px;
+  border: 1px solid #737373;
+  box-shadow: 3px 4px 8px 3px rgba(180, 180, 180, 211);;
+  visibility: inherit;
+}
+.external_order{
+  display: block;
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #737373;
+  box-shadow: 3px 4px 8px 3px rgb(180 180 180);
+  visibility: inherit;		margin: auto;
+}
+
+#icon-close{ 
+  position: absolute;
+  /* margin: 100px; */
+  /* top: calc(-120px + 25%); */
+  /* left: calc(105px + 50%); */
+  /* margin-left: 50%; */
+  margin-left: 103%;
+  margin-top: -23px;
+  transform: scale(1.5);
+  visibility: inherit;
+}
+
+#icon-close:hover{
+  color:#676764;
+  cursor: pointer;
+}
+#icon-close:active{
+  color:#BD6764;
+  cursor: pointer;
+}
+#span{
+  width:100%;
+  height: 60px;
+  text-align: center;
+  padding-top: 4%;
+  font-size: 25px;
+  background-color: #aaa;
+  font-weight:lighter;
+}
+.order-control{
+  height:50px;
+  width: 100%;
+  font-size: 18px;
+  padding-left: 10px;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+}
+.order-control:focus{
+  border-radius: 0;
+}
+
+.order>button{
+  height: 40px;
+  width:100%;
+  margin-top: 5px;
 }

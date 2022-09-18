@@ -6,7 +6,6 @@ using System.Diagnostics;
 
 namespace AppClient.Controllers
 {
-    [Route("Home")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -16,28 +15,15 @@ namespace AppClient.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        [Route("")]
+       
+        
         public async Task<IActionResult> Index()
         {
             var response = await GlobalVariables.WebApiClient.GetAsync("Contact/getAll");
             if(response.IsSuccessStatusCode)
             {
                 var contacts = response.Content.ReadFromJsonAsync<IEnumerable<Contact>>().Result;
-                return View(contacts);
-            }
-            else
-                return StatusCode((int)response.StatusCode);
-        }
-
-        [HttpGet]
-        [Route("{id}")]
-        public async Task<IActionResult> GetContact(int id)
-        {
-            var response = await GlobalVariables.WebApiClient.GetAsync($"Contact/get/{id}");
-            if (response.IsSuccessStatusCode)
-            {
-                var contacts = response.Content.ReadFromJsonAsync<Contact>().Result;
+                ViewData["apiEditUrl"] = "Contact/edit";
                 return View(contacts);
             }
             else

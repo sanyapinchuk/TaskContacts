@@ -10,38 +10,64 @@
 	    <link rel="stylesheet" href="css/styles.css">
 	    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
 	    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	    <script src="https://kit.fontawesome.com/71471d07af.js" crossorigin="anonymous"></script>	  
     </head>
 	<body>
-		<div class="header_top">			
-			<div class="header_contacts">			 
-				<a href=""><img id="logotype" src= "images/logo/logo.png" alt="no image"></a>	
-				
-			</div>
-		</div>
-		
-		
-        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-         </div>
+        <div id="body">
+            <div class="header_top">			
+                <div class="header_contacts">			 
+                    <a href=""><img id="logotype" src= "images/logo/logo.png" alt="no image"></a>	
+                    
+                </div>
+            </div>            
+            
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
 
-        <div id="arrow_up">
-            <i class="fas fa-arrow-up" id="arrow_id"></i>
-        </div>
-        
-        <div class="last_box">
-            <div class="last_line">
-                ContactApp
+            <div id="arrow_up">
+                <i class="fas fa-arrow-up" id="arrow_id"></i>
             </div>
-            <div class="contact_line">				
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                
-                <a href="tel:0000000"><i class="fas fa-phone-alt"></i></a>
-                <a href="example.@@gmail.com"><i class="fas fa-at"></i></a>
+            
+            <div class="last_box">
+                <div class="last_line">
+                    ContactApp
+                </div>
+                <div class="contact_line">				
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    
+                    <a href="tel:0000000"><i class="fas fa-phone-alt"></i></a>
+                    <a href="example.@@gmail.com"><i class="fas fa-at"></i></a>
+                </div>
             </div>
         </div>
+
+		<div id="pop-order">			
+			<div class="order-all" id="order-all">												
+			</div>
+			<div id="add_place">
+				<div class="external_order">					
+					<form id= "order-form" class="order" method="POST" action="@ViewData["apiEditUrl"]">			
+						<i id="icon-close" class="fas fa-times"></i>	
+						<div  id="span">
+							Изменить контакт
+						</div>                    
+                        <input type="hidden" name="id" required value="">					
+                        <input type="text" name="Name" class="order-control" placeholder="Имя *" required>
+                        <input type="tel" name="MobilePhone" class="order-control" placeholder="Телефон *" required>
+                        <input type="text" name="JobTitle" class="order-control" placeholder="Должность">
+                        <input type="tel" name="BirthDate" class="order-control" placeholder="Дата рождения">
+						<button type="submit" style="cursor: pointer;">Изменить</button>
+					</form>	
+				</div>
+			</div>	
+		</div>
         <script src="js/up_panel.js"></script>
+        <script src="js/edit.js"></script>
 	</body>
 </html>
