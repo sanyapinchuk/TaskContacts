@@ -34,13 +34,7 @@ $(function() {
             url: "https://localhost:7241/api/Contact/edit",
             data: dataString,
             success: function() {
-            $('#external_order').html("<div id='message'></div>");
-            $('#message').html("<h2>Contact Form Submitted!</h2>")
-            .append("<p>We will be in touch soon.</p>")
-            .hide()
-            .fadeIn(1500, function() {
-                $('#message').append("<img id='checkmark' src='../images/logo/logo.png' />");
-            });
+            location.reload();
             }
         });
         return false;
