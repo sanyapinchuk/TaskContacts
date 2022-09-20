@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 	    <script src="https://kit.fontawesome.com/71471d07af.js" crossorigin="anonymous"></script>	  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        
     </head>
 	<body>
         <div id="body">
@@ -55,14 +55,14 @@
 			</div>
 			<div id="add_place">
 				<div class="external_order" id="external_order">					
-					<form id= "order-form" name="order_form" class="order" method="POST" action="">			
+					<form id= "order-form" name="order_form" class="order" role="form">			
 						<i id="icon-close" class="fas fa-times"></i>	
 						<div  id="span">
 							Изменить контакт
 						</div>                    
                         <input id="form_input_id" type="hidden" name="Id" required value="">					
-                        <input id="form_input_name" type="text" name="Name" class="order-control" placeholder="Имя *" required>
-                        <input id="form_input_phone" type="tel" name="MobilePhone" class="order-control" placeholder="Телефон *" required>
+                        <input id="form_input_name" type="text" name="Name" class="order-control" placeholder="Имя *">
+                        <input id="form_input_phone" type="tel" name="MobilePhone" class="order-control" placeholder="Телефон *">
                         <input id="form_input_job" type="text" name="JobTitle" class="order-control" placeholder="Должность">
                         <input id="form_input_birth" type="tel" name="BirthDate" class="order-control" placeholder="Дата рождения">
 						<button id="sendForm" type="submit" style="cursor: pointer;">Изменить</button>
@@ -70,7 +70,9 @@
 				</div>
 			</div>	
 		</div>
-        <script src="js/up_panel.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+        <script src="js/up_panel.js"></script>  
         <script src="js/edit.js"></script>
         <script src="js/formHandler.js"></script>
 	</body>
