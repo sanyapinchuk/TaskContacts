@@ -31,6 +31,24 @@ for(let i=0; i<editBtns.length; i++){
   })
 }
 
+let deleteBtns = document.getElementsByClassName('contact_delete');
+for(let i=0; i<deleteBtns.length; i++){
+  deleteBtns[i].addEventListener('click',(evt)=>{
+    var goDelete = confirm("Удалить выбранный контакт?");
+    if(goDelete){
+      let id = document.getElementsByClassName('contact_id')[i].innerHTML;
+      $.ajax({
+        type: "DELETE",
+        url: "https://localhost:7241/api/Contact/delete/"+id,
+        data: "",
+        success: function() {
+            //console.log("success");
+            location.reload();
+        }
+    });
+    }
+  })
+}
 
 document.querySelector("#addContact").onclick = function(){
     //show popup
@@ -40,7 +58,7 @@ document.querySelector("#addContact").onclick = function(){
     elem2.style.opacity = '0.4';
     document.body.style.overflow = 'hidden';
 
-    document.getElementById('form_input_id').value = "";
+    document.getElementById('form_input_id').value = "aa8e2ea1-7ecd-47fe-8791-a2741a25cf48"; //any guid
     document.getElementById('form_input_name').value = "";
     document.getElementById('form_input_phone').value  = "";
     document.getElementById('form_input_job').value  = "";
