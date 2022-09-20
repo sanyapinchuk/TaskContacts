@@ -57,7 +57,7 @@ $(function() {
               maxlength: "Длина должности не должна превышать 150 символов"
           },
           BirthDate: {
-              dateVal: "формат даты дд.мм.гггг"
+              dateVal: "Введите корректную дату в формате дд.мм.гггг"
           }
         },
         submitHandler: function(form) { 
@@ -68,9 +68,14 @@ $(function() {
             var job = $("input#form_input_job").val();
             var dataString = 'Id=' + id + '&Name='+ name + '&MobilePhone=' + phone + '&JobTitle=' + job + '&BirthDate=' + birth;
             //alert (dataString);return false;
+
+            let formElem = document.getElementById('order-form');
+            let methodType = formElem.getAttribute('data-method-type');
+            let actionUrl = formElem.getAttribute('data-action-url');
+
             $.ajax({
-                type: "PUT",
-                url: "https://localhost:7241/api/Contact/edit",
+                type: methodType,
+                url: actionUrl,
                 data: dataString,
                 success: function() {
                     //console.log("success");

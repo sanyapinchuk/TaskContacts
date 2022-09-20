@@ -384,4 +384,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c6c6', end
   color: white;
   font-family: 'Raleway', sans-serif;
   display: inline-block;
+  margin-left: 20px;
+}
+#order-form> label{
+  display: inline-block;
+  margin: 5px auto 15px 5px;
+  width:max-content;
+  color:red;
+  font-family: 'Raleway', sans-serif;
 }
