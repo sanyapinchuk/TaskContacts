@@ -1,8 +1,6 @@
-﻿using AppClient.Models;
-using ClientWeb;
+﻿using ClientWeb;
 using Microsoft.AspNetCore.Mvc;
 using Models;
-using System.Diagnostics;
 
 namespace AppClient.Controllers
 {
@@ -14,9 +12,7 @@ namespace AppClient.Controllers
         {
             _logger = logger;
         }
-            
-       
-        
+
         public async Task<IActionResult> Index()
         {
             var response = await GlobalVariables.WebApiClient.GetAsync("Contact/getAll");
@@ -30,11 +26,5 @@ namespace AppClient.Controllers
                 return StatusCode((int)response.StatusCode);
         }
 
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
