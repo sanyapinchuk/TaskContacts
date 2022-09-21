@@ -4,6 +4,11 @@ namespace AppClient.Controllers
 {
     public class ErrorController : Controller
     {
+        private readonly ILogger<ErrorController> _logger;
+        public ErrorController(ILogger<ErrorController> logger)
+        {
+            _logger= logger;
+        }
 
         [HttpGet("/error")]
         public IActionResult Index(int? statusCode = null)
@@ -12,6 +17,7 @@ namespace AppClient.Controllers
             {
                 this.HttpContext.Response.StatusCode = statusCode.Value;
             }
+            _logger.LogWarning($"Handle http error, status code= {statusCode}");
 
             ViewData["Error"] = statusCode;
             switch (statusCode)

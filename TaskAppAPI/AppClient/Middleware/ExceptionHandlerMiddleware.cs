@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -13,12 +14,12 @@ namespace AppClient.Middleware
     public class ExceptionHandlerMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly IWebHostEnvironment _enviroment;
+        private readonly ILogger<ExceptionHandlerMiddleware> _logger;
 
-        public ExceptionHandlerMiddleware(RequestDelegate next, IWebHostEnvironment environment)
+        public ExceptionHandlerMiddleware(RequestDelegate next, ILogger<ExceptionHandlerMiddleware> logger)
         {
             _next = next;
-            _enviroment = environment;
+            _logger = logger;
         }
 
         public async Task Invoke(HttpContext context)
@@ -29,31 +30,17 @@ namespace AppClient.Middleware
             }
             catch (Exception ex)
             {
-                await HadleProgramExceptionAsync(context, ex);
+                await Task.Run(() => HadleProgramExceptionAsync(context, ex));
             }
         }
-
-        private Task HadleProgramExceptionAsync(HttpContext context, Exception ex)
+        
+        private void HadleProgramExceptionAsync(HttpContext context, Exception exception)
         {
-            var code = context.Response.StatusCode;
-
-            context.Response.ContentType = "application/json";
-            context.Response.StatusCode = (int)code;
-
-            
-            var result = JsonSerializer.Serialize(new { code = code, message = ex.Message }, new JsonSerializerOptions { Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic) });
-
-            if (_enviroment.IsDevelopment())
-            {
-                
-                return context.Response.WriteAsync(result);
-            }
-            else
-            {
-                context.Response.StatusCode = 500;
-                return context.Response.WriteAsync("Server error");
-            }
-            
+            _logger.LogError($"statusCode = {context.Response.StatusCode}, exeptionMessage = {exception.Message}");
+            context.Response.Redirect("/Error?statusCode=500");
         }
+      
+            
+        
     }
 }
